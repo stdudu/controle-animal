@@ -25,7 +25,16 @@
         echo "CEP: $cep<br>";
 
         $sql = "INSERT INTO pessoa (nome, email, endereco, bairro, cep, id_cidade)";
-        $sql .=
+        $sql .= "VALUES ('".$nome."','".$email."','".$endereco."','".$bairro."','".$cep."','".$cidade."')";
+        echo $sql;
+
+        $result = mysqli_query($con, $sql);
+        if($result) {
+            echo "<h2>Dados cadastrados com sucesso<h2>";
+        } else {
+            echo "<h2>Erro ao cadastrar<h2>";
+            echo mysqli_error($con);
+        }
     ?>
 </body>
 </html>
