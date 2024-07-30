@@ -1,0 +1,36 @@
+.singup{
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 1.5em;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    width: 300px; 
+    flex-direction: column;
+    gap: 35px;
+    border-radius: 15px;
+    background: #e3e3e3;
+    border-radius: 8px;
+}
+.inputbox, .inputbox1{
+    position: relative;
+    width: 250px;
+}
+
+.inputbox input, .inputbox1 input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 1em;
+    background: transparent;
+    border-left: 2px solid black;
+}
