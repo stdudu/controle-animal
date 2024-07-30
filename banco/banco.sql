@@ -1,6 +1,6 @@
-drop database if exists ifsp;
-create database if not exists ifsp;
-use ifsp;
+drop database if exists carrocinha;
+create database if not exists carrocinha;
+use carrocinha;
 
 -- tabela Cidade
 create table cidade(

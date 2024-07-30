@@ -3,7 +3,7 @@
     $hostname = 'localhost';
     $username = 'root';
     $password = '';
-    $database = 'IFSP';
+    $database = 'carrocinha';
     $port = 3307;
 
     $con = mysqli_connect($hostname, $username, $password, $database, $port);

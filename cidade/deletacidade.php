@@ -9,7 +9,7 @@
 <body>
     <h1>Deletar Cidade</h1>
     <?php
-        include('include/conexao.php');
+        include('../include/conexao.php');
         $id = $_GET['id'];
         $sql = "DELETE FROM cidade WHERE id = $id";
         $result = mysqli_query($con, $sql);

@@ -9,7 +9,7 @@
 <body>
     <?php
 
-        include('include/conexao.php');
+        include("../include/conexao.php");
 
         $nome = $_POST['nome'];
         $estado = $_POST['estado'];
