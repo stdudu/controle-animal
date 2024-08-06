@@ -17,7 +17,7 @@
 
     ?>
 
-    <h1 style="text-align: center;">Consuta de cidades</h1>
+    <h1 style="text-align: center;">Consulta de cidades</h1>
     <table align="center" border="1" width="500" style="background-color: lightblue;">
         <tr>
             <th>Código</th>

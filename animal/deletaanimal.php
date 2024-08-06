@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Deletar Pessoa</h1>
+    <h1>Deletar Animal</h1>
     <?php
         include('../include/conexao.php');
         $id = $_GET['id'];
-        $sql = "DELETE FROM pessoa WHERE id = $id";
+        $sql = "DELETE FROM animal WHERE id = $id";
         $result = mysqli_query($con, $sql);
         if($result){
             echo "<h2>Dados deletados!</h2>";

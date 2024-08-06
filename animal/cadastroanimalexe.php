@@ -6,9 +6,9 @@
     <title>Formulário de cadastro da cidade</title>
 </head>
 <body>
-    <form class="container" action="" method="post">
+    <form class="container" action="cadastroanimal.php" method="post">
         <div class="card">
-            <a class="singup">Cadastrar Pessoa</a>
+            <a class="singup">Cadastrar Animal</a>
             <div class="inputbox1">
                 <br>
                 <label for="nome">Nome</label>
@@ -21,7 +21,7 @@
             </div>
             <br>
             <div class="inputbox">
-                <label for="raca">Raa</label>
+                <label for="raca">Raça</label>
                 <input type="text" name="raca" id="raca">
             </div>
             <br>
@@ -39,8 +39,22 @@
                 <input type="radio" name="castrado" value="0" id="castrado">
                 <label for="op-sim">Sim</label>
 
-                <input type="radio" name="cadastro" value="1" id="castrado">
+                <input type="radio" name="castrado" value="1" id="castrado">
                 <label for="op-nao">Não</label>
+            </div>
+            <br>
+            <div class="inputbox">
+                <label for="pessoa">Nome dono</label>
+                <select name="pessoa" id="pessoa">
+                    <?php
+                    include('../include/conexao.php');
+                    $sql = "SELECT * FROM pessoa";
+                    $result = mysqli_query($con, $sql);
+                    while($row = mysqli_fetch_array($result)){
+                        echo "<option value='".$row['id']."'>".$row['nome']."</option>";
+                    }
+                    ?>
+                </select>
             </div>
             <br>
                 <button class="enter" type="submit">Cadastrar</button>
