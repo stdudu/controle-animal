@@ -1,11 +1,11 @@
 <?php
     include('../include/conexao.php');
+    $id = $_POST['id'];
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $endereco = $_POST['endereco'];
     $bairro = $_POST['bairro'];
     $cep = $_POST['cep'];
-    $cidade = $_POST['cidade'];
 
 ?>
 <!DOCTYPE html>
