@@ -10,6 +10,7 @@
 <?php
         include('../include/conexao.php');
 
+        $foto = $_POST['foto'];
         $nome = $_POST['nome'];
         $especie = $_POST['especie'];
         $raca = $_POST['raca'];
@@ -19,14 +20,15 @@
         $nome_dono = $_POST['pessoa'];
 
         echo "<h1>Dados da Pessoa</h1>";
+        echo "Foto: $foto<br>";
         echo "Nome: $nome<br>";
         echo "Espécie: $especie<br>";
         echo "Raça: $raca<br>";
         echo "Data de Nascimento: $data_nascimento<br>";
         echo "Castrado: " . $castrado ? "Sim" : "Não". "<br>";
 
-        $sql = "INSERT INTO animal (nome, especie, raca, data_nascimento, idade, castrado, id_pessoa)";
-        $sql .= " VALUES ('".$nome."','".$especie."','".$raca."','".$data_nascimento."','".$idade."','".$castrado."','".$nome_dono."')";
+        $sql = "INSERT INTO animal (foto, nome, especie, raca, data_nascimento, idade, castrado, id_pessoa)";
+        $sql .= " VALUES ('".$foto."','".$nome."','".$especie."','".$raca."','".$data_nascimento."','".$idade."','".$castrado."','".$nome_dono."')";
         echo $sql;
 
         $result = mysqli_query($con, $sql);

@@ -14,9 +14,14 @@
     <title>Document</title>
 </head>
 <body>
-<form action="alteraanimalexe.php" method="post">
+<form action="alteraanimalexe.php" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Cadastro de Animal</legend>
+            <div>
+                <label for="foto">Foto</label>
+                <input type="file" name="foto" id="foto" accept="image/*" value="<?php echo $row['foto']?>">
+            </div>
+            <br>
             <div>
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" value="<?php echo $row['nome']?>">

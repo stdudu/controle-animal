@@ -1,6 +1,7 @@
 <?php
     include('../include/conexao.php');
     $id = $_POST['id'];
+    $foto = $_POST['foto'];
     $nome = $_POST['nome'];
     $especie = $_POST['especie'];
     $raca = $_POST['raca'];
@@ -19,6 +20,7 @@
 <body>
     <h1>Alterando Cliente</h1>
     <?php
+         echo "Foto: $foto<br>";
          echo "Nome: $nome<br>";
          echo "Espécie: $especie<br>";
          echo "Raça: $raca<br>";
@@ -26,6 +28,7 @@
          echo "Castrado: " . $castrado ? "Sim" : "Não". "<br>";
         $castrado = $castrado ? 1 : 0;
         $sql = "UPDATE animal SET
+                    foto = '$foto',
                     nome = '$nome',
                     especie = '$especie',
                     raca = '$raca',

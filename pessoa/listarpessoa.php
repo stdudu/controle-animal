@@ -19,7 +19,7 @@
 
     ?>
     <h1 style="text-align: center;">Consulta de pessoas</h1>
-    <table align="center" border="1" width="700" style="background-color: lightblue;">
+    <table align="center" border="1" width="80%" style="background-color: lightblue;">
         <tr>
             <th>Código</th>
             <th>Nome</th>

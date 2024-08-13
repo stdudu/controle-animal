@@ -6,9 +6,14 @@
     <title>Formulário de cadastro da cidade</title>
 </head>
 <body>
-    <form class="container" action="cadastroanimal.php" method="post">
+    <form class="container" action="cadastroanimal.php" method="post" enctype="multipart/form-data">
         <div class="card">
             <a class="singup">Cadastrar Animal</a>
+            <div class="inputbox1">
+                <br>
+                <label for="foto">Foto</label>
+                <input  type="file" name="foto" id="foto" accept="image/*">
+            </div>
             <div class="inputbox1">
                 <br>
                 <label for="nome">Nome</label>
