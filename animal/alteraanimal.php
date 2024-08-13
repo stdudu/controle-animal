@@ -18,6 +18,11 @@
         <fieldset>
             <legend>Cadastro de Animal</legend>
             <div>
+                <?php
+                if($row['foto'] != ""){
+                    echo "<td><img src='".$row['foto']."' width='80' heigth='100'></td>";
+                }
+                ?>
                 <label for="foto">Foto</label>
                 <input type="file" name="foto" id="foto" accept="image/*" value="<?php echo $row['foto']?>">
             </div>

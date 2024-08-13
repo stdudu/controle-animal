@@ -1,7 +1,15 @@
 <?php
     include('../include/conexao.php');
     $id = $_POST['id'];
-    $foto = $_POST['foto'];
+    // UPLOAD FOTO
+        $nome_foto = "";
+        if(file_exists($_FILES['foto']['tmp_name'])){
+            $pasta_destino = 'fotos/';
+            $extensao = strtolower(substr($_FILES['foto']['name'], -4));
+            $nome_foto = $pasta_destino . date('Ymd-His').$extensao;
+            move_uploaded_file($_FILES['foto']['tmp_name'], $nome_foto);
+        }
+    // FIM UPLOAD
     $nome = $_POST['nome'];
     $especie = $_POST['especie'];
     $raca = $_POST['raca'];
@@ -20,15 +28,25 @@
 <body>
     <h1>Alterando Cliente</h1>
     <?php
-         echo "Foto: $foto<br>";
          echo "Nome: $nome<br>";
          echo "Espécie: $especie<br>";
          echo "Raça: $raca<br>";
          echo "Data de Nascimento: $data_nascimento<br>";
          echo "Castrado: " . $castrado ? "Sim" : "Não". "<br>";
         $castrado = $castrado ? 1 : 0;
+        $sql = "";
+        if($nome_foto == ""){
         $sql = "UPDATE animal SET
-                    foto = '$foto',
+                    nome = '$nome',
+                    especie = '$especie',
+                    raca = '$raca',
+                    data_nascimento = '$data_nascimento',
+                    castrado = '$castrado'
+                WHERE id = $id";
+        }
+        else{
+        $sql = "UPDATE animal SET
+                    foto = '$nome_foto',
                     nome = '$nome',
                     especie = '$especie',
                     raca = '$raca',
@@ -36,6 +54,7 @@
                     castrado = '$castrado'
                 WHERE id = $id";
         $result = mysqli_query($con, $sql);
+        }
         if($result){
             echo "Dados atualizados";
         }

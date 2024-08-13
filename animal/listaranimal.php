@@ -38,7 +38,10 @@
             while($row = mysqli_fetch_array($result)) {
                 echo "<tr>";
                 echo "<td>".$row['id']."</td>";
-                echo "<td>".$row['foto']."</td>";
+                if($row['foto'] == "")
+                    echo "<td></td>";
+                else
+                    echo "<td><img src='".$row['foto']."' width='80' heigth='100'></td>";
                 echo "<td>".$row['nomeanimal']."</td>";
                 echo "<td>".$row['especie']."</td>";
                 echo "<td>".$row['raca']."</td>";
