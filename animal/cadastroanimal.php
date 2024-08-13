@@ -33,8 +33,8 @@
         echo "Data de Nascimento: $data_nascimento<br>";
         echo "Castrado: " . $castrado ? "Sim" : "Não". "<br>";
 
-        $sql = "INSERT INTO animal (nome, especie, raca, data_nascimento, idade, castrado, id_pessoa)";
-        $sql .= " VALUES ('".$nome."','".$especie."','".$raca."','".$data_nascimento."','".$idade."','".$castrado."','".$pessoa."')";
+        $sql = "INSERT INTO animal (nome, especie, raca, data_nascimento, idade, castrado, id_pessoa, foto)";
+        $sql .= " VALUES ('".$nome."','".$especie."','".$raca."','".$data_nascimento."','".$idade."','".$castrado."','".$pessoa."','".$nome_foto."')";
         echo $sql;
 
         $result = mysqli_query($con, $sql);
