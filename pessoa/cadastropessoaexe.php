@@ -6,6 +6,24 @@
     <title>Formulário de cadastro da cidade</title>
 </head>
 <body>
+<!-- <header>
+        <div>
+            <label for="ciadade">Cidade</label>
+            <a href="http://localhost/controle-animal/cidade/cadastrocidade.html"><button>Cadastrar Cidade</button></a>
+            <a href="http://localhost/controle-animal/cidade/listarcidade.php"><button>Listar Cidade</button></a>
+        </div>
+        <br>
+        <div class="pessoa">
+            <a href="http://localhost/controle-animal/pessoa/cadastropessoaexe.php"><button>Cadastrar Pessoa</button></a>
+            <a href="http://localhost/controle-animal/pessoa/listarpessoa.php"><button>Listar Pessoa</button></a>
+        </div>
+        <br>
+        <div class="animal">
+            <a href="http://localhost/controle-animal/animal/cadastroanimalexe.php"><button>Cadastrar Animal</button></a>
+            <a href="http://localhost/controle-animal/animal/listaranimal.php"><button>Listar Animal</button></a>
+        </div>
+        <br>
+</header> -->
     <form class="container" action="cadastropessoa.php" method="post">
         <div class="card">
             <a class="singup">Cadastrar Pessoa</a>
@@ -51,6 +69,10 @@
                 <button class="enter" type="submit">Cadastrar</button>
         </fieldset>
     </div>
-    </form>
+    <br>
+    <div>
+        <a href="../index.html">Voltar a tela inicial</a>
+    </div>
+</form>
 </body>
 </html>

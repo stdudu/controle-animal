@@ -54,7 +54,6 @@
                     castrado = '$castrado'
                 WHERE id = $id";
         $result = mysqli_query($con, $sql);
-        }
         if($result){
             echo "Dados atualizados";
         }

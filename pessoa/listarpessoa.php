@@ -52,5 +52,9 @@
             }
         ?>
     </table>
+    <br>
+    <div>
+        <a href="../index.html">Voltar a tela inicial</a>
+    </div>
 </body>
 </html>
